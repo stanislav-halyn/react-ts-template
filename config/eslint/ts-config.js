@@ -2,10 +2,10 @@ module.exports = {
   extends: [
     'airbnb-typescript',
     'plugin:import/typescript',
-    './base-config',
-    './rules/typescript.rules',
     'prettier',
     'prettier/@typescript-eslint',
+    './base-config',
+    './rules/typescript.rules'
   ],
 
   plugins: ['@typescript-eslint'],
@@ -13,6 +13,6 @@ module.exports = {
   parser: '@typescript-eslint/parser',
 
   parserOptions: {
-    project: './tsconfig.json',
-  },
+    project: './tsconfig.json'
+  }
 };
