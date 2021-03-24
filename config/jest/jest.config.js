@@ -16,22 +16,13 @@ module.exports = {
 
   moduleNameMapper: {
     '.+\\.(css|styl|sass|scss)$': 'identity-obj-proxy',
-    '^actions(.*)$': '<rootDir>/../../src/actions$1',
-    '^components(.*)$': '<rootDir>/../../src/components$1',
-    '^constants(.*)$': '<rootDir>/../../src/constants$1',
-    '^hoc(.*)$': '<rootDir>/../../src/hoc$1',
-    '^hooks(.*)$': '<rootDir>/../../src/hooks$1',
-    '^libs(.*)$': '<rootDir>/../../src/libs$1',
-    '^middlewares(.*)$': '<rootDir>/../../src/middlewares$1',
-    '^reducers(.*)$': '<rootDir>/../../src/reducers$1',
-    '^selectors(.*)$': '<rootDir>/../../src/selectors$1',
-    '^utils(.*)$': '<rootDir>/../../src/utils$1',
-    '^typings(.*)$': '<rootDir>/../../src/typings$1',
-    '^features(.*)$': '<rootDir>/../../src/features$1',
-    '^store(.*)$': '<rootDir>/../../src/store$1',
+    '^@components(.*)$': '<rootDir>/../../src/components$1',
+    '^@constants(.*)$': '<rootDir>/../../src/constants$1',
+    '^@hooks(.*)$': '<rootDir>/../../src/hooks$1',
+    '^@utils(.*)$': '<rootDir>/../../src/utils$1',
+    '^@typings(.*)$': '<rootDir>/../../src/typings$1',
+    '^@features(.*)$': '<rootDir>/../../src/features$1',
   },
-
-  setupFiles: ['./setupTests.js'],
 
   moduleFileExtensions: ['ts', 'tsx', 'js'],
 
@@ -40,4 +31,6 @@ module.exports = {
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
+
+  setupFilesAfterEnv: ['<rootDir>/setup-tests.ts'],
 };
