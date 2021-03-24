@@ -24,8 +24,6 @@ module.exports = {
     '^@features(.*)$': '<rootDir>/../../src/features$1',
   },
 
-  setupFiles: ['./setupTests.js'],
-
   moduleFileExtensions: ['ts', 'tsx', 'js'],
 
   testMatch: ['**/__tests__/**/*.+(ts|tsx|js)', '**/?(*.)+(spec|test).+(ts|tsx|js)'],
@@ -33,4 +31,6 @@ module.exports = {
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
+
+  setupFilesAfterEnv: ['<rootDir>/setup-tests.ts'],
 };
